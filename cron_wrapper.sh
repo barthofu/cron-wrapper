@@ -49,7 +49,7 @@ fi
 
 # Retrieve all arguments for the command
 echo "$(date): starting cron, command=[$*]"
-source $@
+"$@"
 exit_code=$?
 echo "$(date): cron ended, exit code is $exit_code"
 
