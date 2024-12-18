@@ -11,6 +11,7 @@ if [ -z $CRON_LOG_DIR ]; then
     echo "CRON_LOG_DIR is not set"
     exit 1
 fi
+mkdir -p "$CRON_LOG_DIR"
 log_file="$CRON_LOG_DIR/$(date +'%Y-%m-%d')_cron.log"
 exec 2>&1 1>>"$log_file" # redirect stdout and stderr to the log file
 
